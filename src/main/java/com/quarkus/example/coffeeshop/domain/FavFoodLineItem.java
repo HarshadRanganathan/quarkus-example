@@ -5,20 +5,20 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 import java.util.Objects;
 
 @RegisterForReflection
-public class FavFoodLineItems {
-
-    private String item;
+public class FavFoodLineItem {
 
     private String itemId;
 
+    private String item;
+
     private int quantity;
 
-    public FavFoodLineItems() {
+    public FavFoodLineItem() {
     }
 
-    public FavFoodLineItems(String item, String itemId, int quantity) {
-        this.item = item;
+    public FavFoodLineItem(String itemId, String item, int quantity) {
         this.itemId = itemId;
+        this.item = item;
         this.quantity = quantity;
     }
 
@@ -50,7 +50,7 @@ public class FavFoodLineItems {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FavFoodLineItems that = (FavFoodLineItems) o;
+        FavFoodLineItem that = (FavFoodLineItem) o;
         return quantity == that.quantity &&
                 Objects.equals(item, that.item) &&
                 Objects.equals(itemId, that.itemId);

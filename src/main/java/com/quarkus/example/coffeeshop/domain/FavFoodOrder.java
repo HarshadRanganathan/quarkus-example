@@ -12,12 +12,12 @@ public class FavFoodOrder {
 
     private String orderId;
 
-    private List<FavFoodLineItems> favFoodLineItems;
+    private List<FavFoodLineItem> favFoodLineItems;
 
     public FavFoodOrder() {
     }
 
-    public FavFoodOrder(String customerName, String orderId, List<FavFoodLineItems> favFoodLineItems) {
+    public FavFoodOrder(String customerName, String orderId, List<FavFoodLineItem> favFoodLineItems) {
         this.customerName = customerName;
         this.orderId = orderId;
         this.favFoodLineItems = favFoodLineItems;
@@ -39,11 +39,11 @@ public class FavFoodOrder {
         this.orderId = orderId;
     }
 
-    public List<FavFoodLineItems> getFavFoodLineItems() {
+    public List<FavFoodLineItem> getFavFoodLineItems() {
         return favFoodLineItems;
     }
 
-    public void setFavFoodLineItems(List<FavFoodLineItems> favFoodLineItems) {
+    public void setFavFoodLineItems(List<FavFoodLineItem> favFoodLineItems) {
         this.favFoodLineItems = favFoodLineItems;
     }
 
